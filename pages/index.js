@@ -3,19 +3,9 @@ import Head from 'next/head'
 export default function Home() {
   const downloadLinks = [
     {
-      name: "RoCleaner (Windows)",
-      url: "https://drive.google.com/uc?export=download&id=1Uef_ua2UZogn9zlNfn_zJCiOajrVzB-y",
+      name: "RoCleaner для Windows",
+      url: "https://drive.google.com/drive/folders/1Uef_ua2UZogn9zlNfn_zJCiOajrVzB-y?usp=sharing",
       icon: "windows"
-    },
-    {
-      name: "RoCleaner (MacOS)",
-      url: "https://drive.google.com/uc?export=download&id=1Uef_ua2UZogn9zlNfn_zJCiOajrVzB-y", 
-      icon: "mac"
-    },
-    {
-      name: "RoCleaner (Linux)",
-      url: "https://drive.google.com/uc?export=download&id=1Uef_ua2UZogn9zlNfn_zJCiOajrVzB-y",
-      icon: "linux"
     }
   ]
 
@@ -24,16 +14,6 @@ export default function Home() {
       windows: (
         <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
           <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/>
-        </svg>
-      ),
-      mac: (
-        <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
-          <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
-        </svg>
-      ),
-      linux: (
-        <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2m-1.5 17.5c-2-1.5-3.5-4-3.5-6.5h2c0 1.5 1 3 2.5 3.5v3m7-3.5c0 2.5-1.5 5-3.5 6.5v-3c1.5-.5 2.5-2 2.5-3.5h1m-2-4c0-1.5-1-3-2.5-3.5v3c-1.5.5-2.5 2-2.5 3.5h-2c0-2.5 1.5-5 3.5-6.5v-3c-3 .5-5.5 3-5.5 6.5h2c0-2 1.5-3.5 3.5-3.5s3.5 1.5 3.5 3.5h2c0-3.5-2.5-6-5.5-6.5v3c2 1 3.5 2.5 3.5 4.5h-2z"/>
         </svg>
       ),
       security: (
@@ -51,9 +31,9 @@ export default function Home() {
           <path d="M12 2A10 10 0 002 12a10 10 0 0010 10 10 10 0 0010-10A10 10 0 0012 2zm0 18a8 8 0 01-8-8 8 8 0 018-8 8 8 0 018 8 8 8 0 01-8 8zm4-8a4 4 0 01-4 4 4 4 0 01-4-4 4 4 0 014-4 4 4 0 014 4zm-2 0a2 2 0 01-2 2 2 2 0 01-2-2 2 2 0 012-2 2 2 0 012 2z"/>
         </svg>
       ),
-      warning: (
+      download: (
         <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
-          <path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/>
+          <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
         </svg>
       )
     }
@@ -71,36 +51,48 @@ export default function Home() {
       </Head>
       
       <div className="container">
+        <div className="background-animation">
+          <div className="gradient-ball ball-1"></div>
+          <div className="gradient-ball ball-2"></div>
+          <div className="gradient-ball ball-3"></div>
+        </div>
+
         <header className="header">
-          <h1>RoCleaner</h1>
-          <p className="subtitle">Умное управление друзьями в Roblox</p>
+          <div className="header-content">
+            <h1 className="title-glitch">RoCleaner</h1>
+            <p className="subtitle">Умное управление друзьями в Roblox</p>
+          </div>
         </header>
 
         <main className="main">
           <section className="hero">
             <div className="hero-content">
-              <h2>Скачайте RoCleaner бесплатно</h2>
-              <p>Простой и безопасный способ управления вашим списком друзей в Roblox</p>
+              <div className="hero-text">
+                <h2 className="hero-title">
+                  Скачайте RoCleaner бесплатно
+                </h2>
+                <p className="hero-description">Простой и безопасный способ управления вашим списком друзей в Roblox</p>
+              </div>
               
               <div className="features">
-                <div className="feature">
-                  <span className="feature-icon">
+                <div className="feature-card glass-effect">
+                  <div className="feature-icon-wrapper">
                     <Icon name="security" size={32} />
-                  </span>
+                  </div>
                   <h3>Безопасно</h3>
                   <p>Не требует пароля от аккаунта</p>
                 </div>
-                <div className="feature">
-                  <span className="feature-icon">
+                <div className="feature-card glass-effect">
+                  <div className="feature-icon-wrapper">
                     <Icon name="speed" size={32} />
-                  </span>
+                  </div>
                   <h3>Быстро</h3>
                   <p>Массовое управление друзьями</p>
                 </div>
-                <div className="feature">
-                  <span className="feature-icon">
+                <div className="feature-card glass-effect">
+                  <div className="feature-icon-wrapper">
                     <Icon name="target" size={32} />
-                  </span>
+                  </div>
                   <h3>Точно</h3>
                   <p>Гибкая система исключений</p>
                 </div>
@@ -109,253 +101,369 @@ export default function Home() {
           </section>
 
           <section className="download-section">
-            <h2>Скачать RoCleaner</h2>
-            <div className="download-links">
-              {downloadLinks.map((link, index) => (
-                <a 
-                  key={index}
-                  href={link.url}
-                  className="download-button"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span className="icon">
-                    <Icon name={link.icon} size={24} />
-                  </span>
-                  <span className="text">{link.name}</span>
-                </a>
-              ))}
+            <div className="download-card glass-effect">
+              <h2 className="download-title">Скачать RoCleaner</h2>
+              <div className="download-links">
+                {downloadLinks.map((link, index) => (
+                  <a 
+                    key={index}
+                    href={link.url}
+                    className="download-button"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span className="button-icon">
+                      <Icon name={link.icon} size={24} />
+                    </span>
+                    <span className="button-text">{link.name}</span>
+                    <span className="button-arrow">→</span>
+                  </a>
+                ))}
+              </div>
+              <p className="download-note">
+                Откроется Google Drive. Нажмите "Скачать" в правом верхнем углу.
+              </p>
             </div>
-            <p className="note">
-              <span className="warning-icon">
-                <Icon name="warning" size={16} />
-              </span>
-              Файлы находятся на Google Drive. После перехода нажмите "Скачать" в правом верхнем углу.
-            </p>
           </section>
 
           <section className="instructions">
-            <h2>Как использовать</h2>
-            <div className="steps">
-              <div className="step">
-                <div className="step-number">1</div>
+            <h2 className="section-title">Как использовать</h2>
+            <div className="steps-grid">
+              <div className="step-card glass-effect">
+                <div className="step-number">01</div>
                 <h3>Скачайте приложение</h3>
-                <p>Выберите версию для вашей операционной системы</p>
+                <p>Загрузите RoCleaner для Windows</p>
               </div>
-              <div className="step">
-                <div className="step-number">2</div>
+              <div className="step-card glass-effect">
+                <div className="step-number">02</div>
                 <h3>Запустите программу</h3>
-                <p>Откройте RoCleaner и следуйте инструкциям в приложении</p>
+                <p>Откройте RoCleaner и следуйте инструкциям</p>
               </div>
-              <div className="step">
-                <div className="step-number">3</div>
+              <div className="step-card glass-effect">
+                <div className="step-number">03</div>
                 <h3>Настройте исключения</h3>
-                <p>Добавьте друзей которых хотите сохранить в список исключений</p>
+                <p>Добавьте друзей в список исключений</p>
               </div>
-              <div className="step">
-                <div className="step-number">4</div>
+              <div className="step-card glass-effect">
+                <div className="step-number">04</div>
                 <h3>Запустите очистку</h3>
-                <p>Нажмите кнопку очистки и дождитесь завершения процесса</p>
+                <p>Начните процесс и дождитесь завершения</p>
               </div>
             </div>
           </section>
 
           <section className="faq">
-            <h2>Частые вопросы</h2>
-            <div className="faq-item">
-              <h3>Безопасно ли это?</h3>
-              <p>Да! Приложение использует только cookie для авторизации и не требует пароль от вашего аккаунта. Исходный код открыт для проверки.</p>
-            </div>
-            <div className="faq-item">
-              <h3>На каких системах работает?</h3>
-              <p>RoCleaner работает на Windows, MacOS и Linux. Выберите подходящую версию для скачивания.</p>
-            </div>
-            <div className="faq-item">
-              <h3>Это бесплатно?</h3>
-              <p>Да, приложение полностью бесплатное и без скрытых платежей.</p>
+            <h2 className="section-title">Частые вопросы</h2>
+            <div className="faq-content">
+              <div className="faq-grid">
+                <div className="faq-card glass-effect">
+                  <h3>Безопасно ли это?</h3>
+                  <p>Да! Приложение использует только cookie для авторизации и не требует пароль от вашего аккаунта.</p>
+                </div>
+                <div className="faq-card glass-effect">
+                  <h3>На каких системах работает?</h3>
+                  <p>RoCleaner работает на Windows. Поддержка других систем в разработке.</p>
+                </div>
+                <div className="faq-card glass-effect">
+                  <h3>Это бесплатно?</h3>
+                    <div className="faq-gif">
+                      <img 
+                      src="https://media1.tenor.com/m/J4KBZSb6CMcAAAAd/%D0%B1%D0%B5%D1%81%D0%BF%D0%BB%D0%B0%D1%82%D0%BD%D0%BE.gif" 
+                      alt="Бесплатно" 
+                      className="free-gif"
+                      />
+                    </div>
+                  <p>Да, приложение полностью бесплатное и без скрытых платежей.</p>
+                </div>
+              </div>
             </div>
           </section>
         </main>
 
         <footer className="footer">
-          <p>© 2025 RoCleaner. Не аффилирован с Roblox Corporation.</p>
+          <div className="footer-content">
+            <p>© 2025 RoCleaner. Не аффилирован с Roblox Corporation.</p>
+          </div>
         </footer>
       </div>
 
       <style jsx>{`
         .container {
           min-height: 100vh;
-          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-          color: white;
+          background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 50%, #2d1b69 100%);
+          color: #ffffff;
+          position: relative;
+          overflow: hidden;
+        }
+
+        .background-animation {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 0;
+        }
+
+        .gradient-ball {
+          position: absolute;
+          border-radius: 50%;
+          filter: blur(60px);
+          opacity: 0.3;
+          animation: float 6s ease-in-out infinite;
+        }
+
+        .ball-1 {
+          width: 300px;
+          height: 300px;
+          background: radial-gradient(circle, #667eea 0%, transparent 70%);
+          top: 10%;
+          left: 10%;
+          animation-delay: 0s;
+        }
+
+        .ball-2 {
+          width: 400px;
+          height: 400px;
+          background: radial-gradient(circle, #764ba2 0%, transparent 70%);
+          top: 60%;
+          right: 10%;
+          animation-delay: 2s;
+        }
+
+        .ball-3 {
+          width: 250px;
+          height: 250px;
+          background: radial-gradient(circle, #f093fb 0%, transparent 70%);
+          bottom: 10%;
+          left: 20%;
+          animation-delay: 4s;
         }
 
         .header {
+          position: relative;
+          z-index: 1;
+          padding: 4rem 1rem 2rem;
           text-align: center;
-          padding: 2rem 1rem;
         }
 
-        .header h1 {
-          font-size: 3rem;
+        .header-content {
+          max-width: 1200px;
+          margin: 0 auto;
+        }
+
+        .title-glitch {
+          font-size: 4rem;
+          font-weight: 900;
           margin: 0;
-          font-weight: bold;
+          background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          animation: glitch 3s infinite;
         }
 
         .subtitle {
-          font-size: 1.2rem;
-          opacity: 0.9;
-          margin: 0.5rem 0 0 0;
+          font-size: 1.4rem;
+          opacity: 0.8;
+          margin: 1rem 0 0 0;
+          font-weight: 300;
         }
 
         .main {
+          position: relative;
+          z-index: 1;
           max-width: 1200px;
           margin: 0 auto;
-          padding: 0 1rem;
+          padding: 0 1rem 4rem;
         }
 
         .hero {
+          padding: 4rem 0;
           text-align: center;
-          padding: 3rem 0;
         }
 
-        .hero h2 {
-          font-size: 2.5rem;
-          margin-bottom: 1rem;
+        .hero-title {
+          font-size: 3rem;
+          font-weight: 700;
+          margin: 0 0 1rem 0;
+          background: linear-gradient(135deg, #ffffff 0%, #a8a8a8 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
         }
 
-        .hero p {
-          font-size: 1.2rem;
-          opacity: 0.9;
+        .hero-description {
+          font-size: 1.3rem;
+          opacity: 0.8;
           max-width: 600px;
-          margin: 0 auto 2rem;
+          margin: 0 auto 3rem;
+          line-height: 1.6;
         }
 
         .features {
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
           gap: 2rem;
-          margin-top: 3rem;
+          margin-top: 4rem;
         }
 
-        .feature {
-          background: rgba(255, 255, 255, 0.1);
-          padding: 2rem;
-          border-radius: 15px;
-          backdrop-filter: blur(10px);
+        .feature-card {
+          padding: 2.5rem 2rem;
+          border-radius: 20px;
+          text-align: center;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .feature-icon {
-          display: block;
-          margin-bottom: 1rem;
+        .feature-card:hover {
+          transform: translateY(-5px);
         }
 
-        .feature h3 {
+        .feature-icon-wrapper {
+          width: 80px;
+          height: 80px;
+          margin: 0 auto 1.5rem;
+          background: linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%);
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .feature-card h3 {
+          font-size: 1.4rem;
           margin: 0 0 1rem 0;
-          font-size: 1.3rem;
+          font-weight: 600;
         }
 
-        .feature p {
+        .feature-card p {
           margin: 0;
-          opacity: 0.8;
+          opacity: 0.7;
+          line-height: 1.5;
         }
 
         .download-section {
-          text-align: center;
           padding: 4rem 0;
-          background: rgba(255, 255, 255, 0.05);
-          margin: 2rem 0;
-          border-radius: 20px;
         }
 
-        .download-section h2 {
-          font-size: 2rem;
-          margin-bottom: 2rem;
+        .download-card {
+          padding: 3rem;
+          border-radius: 25px;
+          text-align: center;
+          max-width: 600px;
+          margin: 0 auto;
+        }
+
+        .download-title {
+          font-size: 2.5rem;
+          margin: 0 0 2rem 0;
+          font-weight: 700;
+          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
         }
 
         .download-links {
           display: flex;
           flex-direction: column;
           gap: 1rem;
-          max-width: 400px;
-          margin: 0 auto;
+          margin-bottom: 2rem;
         }
 
         .download-button {
           display: flex;
           align-items: center;
-          gap: 1rem;
-          padding: 1rem 2rem;
-          background: rgba(255, 255, 255, 0.2);
-          border: 2px solid rgba(255, 255, 255, 0.3);
-          border-radius: 10px;
+          justify-content: space-between;
+          padding: 1.2rem 2rem;
+          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+          border: none;
+          border-radius: 15px;
           color: white;
           text-decoration: none;
-          font-weight: bold;
+          font-weight: 600;
+          font-size: 1.1rem;
           transition: all 0.3s ease;
+          box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
         }
 
         .download-button:hover {
-          background: rgba(255, 255, 255, 0.3);
-          border-color: rgba(255, 255, 255, 0.5);
-          transform: translateY(-2px);
+          transform: translateY(-3px);
+          box-shadow: 0 12px 35px rgba(102, 126, 234, 0.4);
         }
 
-        .note {
+        .button-icon {
           display: flex;
           align-items: center;
-          justify-content: center;
-          gap: 0.5rem;
-          margin-top: 2rem;
-          opacity: 0.8;
+        }
+
+        .button-text {
+          flex: 1;
+          text-align: center;
+        }
+
+        .button-arrow {
+          font-size: 1.2rem;
+        }
+
+        .download-note {
+          opacity: 0.7;
           font-size: 0.9rem;
-        }
-
-        .warning-icon {
-          display: flex;
-          align-items: center;
+          margin: 0;
         }
 
         .instructions {
           padding: 4rem 0;
         }
 
-        .instructions h2 {
+        .section-title {
+          font-size: 2.5rem;
           text-align: center;
-          font-size: 2rem;
-          margin-bottom: 3rem;
+          margin: 0 0 3rem 0;
+          font-weight: 700;
+          background: linear-gradient(135deg, #ffffff 0%, #a8a8a8 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
         }
 
-        .steps {
+        .steps-grid {
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
           gap: 2rem;
         }
 
-        .step {
+        .step-card {
+          padding: 2.5rem 2rem;
+          border-radius: 20px;
           text-align: center;
-          padding: 2rem;
+          transition: transform 0.3s ease;
+        }
+
+        .step-card:hover {
+          transform: translateY(-5px);
         }
 
         .step-number {
-          width: 50px;
-          height: 50px;
-          background: rgba(255, 255, 255, 0.2);
-          border-radius: 50%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          font-size: 1.5rem;
-          font-weight: bold;
-          margin: 0 auto 1rem;
-        }
-
-        .step h3 {
+          font-size: 3rem;
+          font-weight: 900;
+          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
           margin: 0 0 1rem 0;
-          font-size: 1.3rem;
+          opacity: 0.8;
         }
 
-        .step p {
+        .step-card h3 {
+          font-size: 1.3rem;
+          margin: 0 0 1rem 0;
+          font-weight: 600;
+        }
+
+        .step-card p {
           margin: 0;
-          opacity: 0.8;
+          opacity: 0.7;
           line-height: 1.5;
         }
 
@@ -363,56 +471,138 @@ export default function Home() {
           padding: 4rem 0;
         }
 
-        .faq h2 {
-          text-align: center;
-          font-size: 2rem;
-          margin-bottom: 3rem;
+        .faq-content {
+          display: grid;
+          grid-template-columns: 300px 1fr;
+          gap: 3rem;
+          align-items: start;
         }
 
-        .faq-item {
-          background: rgba(255, 255, 255, 0.05);
+        .faq-gif {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .free-gif {
+          max-width: 100%;
+          border-radius: 15px;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .faq-grid {
+          display: flex;
+          flex-direction: column;
+          gap: 1.5rem;
+        }
+
+        .faq-card {
           padding: 2rem;
           border-radius: 15px;
-          margin-bottom: 1.5rem;
+          transition: transform 0.3s ease;
         }
 
-        .faq-item h3 {
-          margin: 0 0 1rem 0;
+        .faq-card:hover {
+          transform: translateX(5px);
+        }
+
+        .faq-card h3 {
           font-size: 1.2rem;
+          margin: 0 0 1rem 0;
+          font-weight: 600;
+          color: #667eea;
         }
 
-        .faq-item p {
+        .faq-card p {
           margin: 0;
           opacity: 0.8;
           line-height: 1.6;
         }
 
         .footer {
+          position: relative;
+          z-index: 1;
+          padding: 2rem 1rem;
           text-align: center;
-          padding: 2rem;
           border-top: 1px solid rgba(255, 255, 255, 0.1);
           margin-top: 4rem;
         }
 
+        .footer-content {
+          max-width: 1200px;
+          margin: 0 auto;
+        }
+
+        .footer p {
+          margin: 0;
+          opacity: 0.6;
+        }
+
+        .glass-effect {
+          background: rgba(255, 255, 255, 0.05);
+          backdrop-filter: blur(20px);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        }
+
+        @keyframes float {
+          0%, 100% {
+            transform: translateY(0px) rotate(0deg);
+          }
+          50% {
+            transform: translateY(-20px) rotate(180deg);
+          }
+        }
+
+        @keyframes glitch {
+          0%, 100% {
+            transform: translate(0);
+          }
+          5% {
+            transform: translate(-2px, 2px);
+          }
+          10% {
+            transform: translate(-2px, -2px);
+          }
+          15% {
+            transform: translate(2px, 2px);
+          }
+          20% {
+            transform: translate(2px, -2px);
+          }
+          50% {
+            transform: translate(0);
+          }
+        }
+
         @media (max-width: 768px) {
-          .header h1 {
-            font-size: 2rem;
+          .title-glitch {
+            font-size: 2.5rem;
           }
           
-          .hero h2 {
-            font-size: 1.8rem;
+          .hero-title {
+            font-size: 2rem;
           }
           
           .features {
             grid-template-columns: 1fr;
           }
           
-          .steps {
+          .steps-grid {
             grid-template-columns: 1fr;
           }
           
-          .download-links {
-            max-width: 100%;
+          .faq-content {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+          }
+          
+          .download-card {
+            padding: 2rem 1.5rem;
+          }
+          
+          .feature-card, .step-card, .faq-card {
+            padding: 2rem 1.5rem;
           }
         }
       `}</style>
@@ -427,6 +617,12 @@ export default function Home() {
           padding: 0;
           font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
           line-height: 1.6;
+          background: #0f0f0f;
+          color: #ffffff;
+        }
+        
+        html {
+          scroll-behavior: smooth;
         }
       `}</style>
     </>
