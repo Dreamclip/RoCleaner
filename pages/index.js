@@ -68,9 +68,7 @@ export default function Home() {
           <section className="hero">
             <div className="hero-content">
               <div className="hero-text">
-                <h2 className="hero-title">
-                  Скачайте RoCleaner бесплатно
-                </h2>
+                <h2 className="hero-title">Скачайте RoCleaner бесплатно</h2>
                 <p className="hero-description">Простой и безопасный способ управления вашим списком друзей в Roblox</p>
               </div>
               
@@ -312,7 +310,7 @@ export default function Home() {
           padding: 2.5rem 2rem;
           border-radius: 20px;
           text-align: center;
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
+          transition: transform 0.3s ease;
         }
 
         .feature-card:hover {
@@ -548,10 +546,10 @@ export default function Home() {
 
         @keyframes float {
           0%, 100% {
-            transform: translateY(0px) rotate(0deg);
+            transform: translateY(0px);
           }
           50% {
-            transform: translateY(-20px) rotate(180deg);
+            transform: translateY(-20px);
           }
         }
 
@@ -628,5 +626,6 @@ export default function Home() {
     </>
   )
 }
+
 
 
