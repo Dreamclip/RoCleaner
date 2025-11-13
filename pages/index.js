@@ -154,27 +154,33 @@ export default function Home() {
 
           <section className="faq">
             <h2 className="section-title">Частые вопросы</h2>
-            <div className="faq-content">
-              <div className="faq-grid">
-                <div className="faq-card glass-effect">
+            <div className="faq-grid">
+              <div className="faq-card glass-effect">
+                <div className="faq-header">
                   <h3>Безопасно ли это?</h3>
-                  <p>Да! Приложение использует только cookie для авторизации и не требует пароль от вашего аккаунта.</p>
                 </div>
-                <div className="faq-card glass-effect">
+                <p>Да! Приложение использует только cookie для авторизации и не требует пароль от вашего аккаунта.</p>
+              </div>
+              
+              <div className="faq-card glass-effect">
+                <div className="faq-header">
                   <h3>На каких системах работает?</h3>
-                  <p>RoCleaner работает на Windows. Поддержка других систем в разработке.</p>
                 </div>
-                <div className="faq-card glass-effect">
+                <p>RoCleaner работает на Windows. Поддержка других систем в разработке.</p>
+              </div>
+              
+              <div className="faq-card glass-effect free-card">
+                <div className="faq-header">
                   <h3>Это бесплатно?</h3>
-                    <div className="faq-gif">
-                      <img 
+                  <div className="free-gif-container">
+                    <img 
                       src="https://media1.tenor.com/m/J4KBZSb6CMcAAAAd/%D0%B1%D0%B5%D1%81%D0%BF%D0%BB%D0%B0%D1%82%D0%BD%D0%BE.gif" 
                       alt="Бесплатно" 
                       className="free-gif"
-                      />
-                    </div>
-                  <p>Да, приложение полностью бесплатное и без скрытых платежей.</p>
+                    />
+                  </div>
                 </div>
+                <p>Да, приложение полностью бесплатное и без скрытых платежей.</p>
               </div>
             </div>
           </section>
@@ -471,29 +477,12 @@ export default function Home() {
           padding: 4rem 0;
         }
 
-        .faq-content {
-          display: grid;
-          grid-template-columns: 300px 1fr;
-          gap: 3rem;
-          align-items: start;
-        }
-
-        .faq-gif {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        .free-gif {
-          max-width: 100%;
-          border-radius: 15px;
-          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-        }
-
         .faq-grid {
           display: flex;
           flex-direction: column;
           gap: 1.5rem;
+          max-width: 800px;
+          margin: 0 auto;
         }
 
         .faq-card {
@@ -506,11 +495,36 @@ export default function Home() {
           transform: translateX(5px);
         }
 
+        .free-card {
+          position: relative;
+          border: 2px solid rgba(102, 126, 234, 0.3);
+        }
+
+        .faq-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+          margin-bottom: 1rem;
+          gap: 1rem;
+        }
+
         .faq-card h3 {
           font-size: 1.2rem;
-          margin: 0 0 1rem 0;
+          margin: 0;
           font-weight: 600;
           color: #667eea;
+          flex: 1;
+        }
+
+        .free-gif-container {
+          flex-shrink: 0;
+        }
+
+        .free-gif {
+          width: 120px;
+          height: auto;
+          border-radius: 8px;
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
         }
 
         .faq-card p {
@@ -592,17 +606,22 @@ export default function Home() {
             grid-template-columns: 1fr;
           }
           
-          .faq-content {
-            grid-template-columns: 1fr;
-            gap: 2rem;
-          }
-          
           .download-card {
             padding: 2rem 1.5rem;
           }
           
           .feature-card, .step-card, .faq-card {
             padding: 2rem 1.5rem;
+          }
+          
+          .faq-header {
+            flex-direction: column;
+            align-items: flex-start;
+          }
+          
+          .free-gif {
+            width: 100px;
+            margin-top: 0.5rem;
           }
         }
       `}</style>
