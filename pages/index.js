@@ -169,19 +169,18 @@ export default function Home() {
                 <p>RoCleaner работает на Windows. Поддержка других систем в разработке.</p>
               </div>
               
-              <div className="faq-card glass-effect free-card">
-                <div className="faq-header">
-                  <h3>Это бесплатно?</h3>
-                  <div className="free-gif-container">
-                    <img 
-                      src="https://media1.tenor.com/m/J4KBZSb6CMcAAAAd/%D0%B1%D0%B5%D1%81%D0%BF%D0%BB%D0%B0%D1%82%D0%BD%D0%BE.gif" 
-                      alt="Бесплатно" 
-                      className="free-gif"
-                    />
-                  </div>
-                </div>
-                <p>Да, приложение полностью бесплатное и без скрытых платежей.</p>
+            <div className="faq-card glass-effect free-card">
+              <div className="faq-header">
+                <h3>Это бесплатно?</h3>
               </div>
+              <div className="free-gif-container">
+                <img 
+                  src="https://media1.tenor.com/m/J4KBZSb6CMcAAAAd/%D0%B1%D0%B5%D1%81%D0%BF%D0%BB%D0%B0%D1%82%D0%BD%D0%BE.gif" 
+                  alt="Бесплатно" 
+                  className="free-gif"
+                />
+              </div>
+              <p>Да, приложение полностью бесплатное и без скрытых платежей.</p>
             </div>
           </section>
         </main>
@@ -647,3 +646,4 @@ export default function Home() {
     </>
   )
 }
+
