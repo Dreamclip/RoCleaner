@@ -156,31 +156,26 @@ export default function Home() {
             <h2 className="section-title">Частые вопросы</h2>
             <div className="faq-grid">
               <div className="faq-card glass-effect">
-                <div className="faq-header">
-                  <h3>Безопасно ли это?</h3>
-                </div>
+                <h3>Безопасно ли это?</h3>
                 <p>Да! Приложение использует только cookie для авторизации и не требует пароль от вашего аккаунта.</p>
               </div>
               
               <div className="faq-card glass-effect">
-                <div className="faq-header">
-                  <h3>На каких системах работает?</h3>
-                </div>
+                <h3>На каких системах работает?</h3>
                 <p>RoCleaner работает на Windows. Поддержка других систем в разработке.</p>
               </div>
               
-            <div className="faq-card glass-effect free-card">
-              <div className="faq-header">
+              <div className="faq-card glass-effect free-card">
                 <h3>Это бесплатно?</h3>
+                <div className="free-gif-container">
+                  <img 
+                    src="https://media1.tenor.com/m/J4KBZSb6CMcAAAAd/%D0%B1%D0%B5%D1%81%D0%BF%D0%BB%D0%B0%D1%82%D0%BD%D0%BE.gif" 
+                    alt="Бесплатно" 
+                    className="free-gif"
+                  />
+                </div>
+                <p>Да, приложение полностью бесплатное и без скрытых платежей.</p>
               </div>
-              <div className="free-gif-container">
-                <img 
-                  src="https://media1.tenor.com/m/J4KBZSb6CMcAAAAd/%D0%B1%D0%B5%D1%81%D0%BF%D0%BB%D0%B0%D1%82%D0%BD%D0%BE.gif" 
-                  alt="Бесплатно" 
-                  className="free-gif"
-                />
-              </div>
-              <p>Да, приложение полностью бесплатное и без скрытых платежей.</p>
             </div>
           </section>
         </main>
@@ -499,20 +494,11 @@ export default function Home() {
           border: 2px solid rgba(102, 126, 234, 0.3);
         }
 
-        .faq-header {
-          display: flex;
-          justify-content: space-between;
-          align-items: flex-start;
-          margin-bottom: 1rem;
-          gap: 1rem;
-        }
-
         .faq-card h3 {
           font-size: 1.2rem;
-          margin: 0;
+          margin: 0 0 1rem 0;
           font-weight: 600;
           color: #667eea;
-          flex: 1;
         }
 
         .free-gif-container {
@@ -520,7 +506,7 @@ export default function Home() {
           justify-content: center;
           margin: 1rem 0;
         }
-        
+
         .free-gif {
           width: 150px;
           height: auto;
@@ -615,14 +601,8 @@ export default function Home() {
             padding: 2rem 1.5rem;
           }
           
-          .faq-header {
-            flex-direction: column;
-            align-items: flex-start;
-          }
-          
           .free-gif {
-            width: 100px;
-            margin-top: 0.5rem;
+            width: 120px;
           }
         }
       `}</style>
