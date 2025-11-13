@@ -516,11 +516,13 @@ export default function Home() {
         }
 
         .free-gif-container {
-          flex-shrink: 0;
+          display: flex;
+          justify-content: center;
+          margin: 1rem 0;
         }
-
+        
         .free-gif {
-          width: 120px;
+          width: 150px;
           height: auto;
           border-radius: 8px;
           box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
@@ -646,4 +648,5 @@ export default function Home() {
     </>
   )
 }
+
 
