@@ -6,11 +6,6 @@ export default function Home() {
       name: "RoCleaner для Windows",
       url: "https://drive.google.com/drive/folders/1Uef_ua2UZogn9zlNfn_zJCiOajrVzB-y?usp=sharing",
       icon: "windows"
-    },
-    {
-      name: "RoCleaner для Linux",
-      url: "https://drive.google.com/drive/folders/1pAVDjhBtpicZmpYMkR1msMDNDeNc2GMt?usp=sharing",
-      icon: "linux"
     }
   ]
 
@@ -19,11 +14,6 @@ export default function Home() {
       windows: (
         <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
           <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/>
-        </svg>
-      ),
-      linux: (
-        <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15.5v-7l6 3.5-6 3.5zm7.5-5.5c0 .83-.67 1.5-1.5 1.5s-1.5-.67-1.5-1.5.67-1.5 1.5-1.5 1.5.67 1.5 1.5zm-3-4c0 .83-.67 1.5-1.5 1.5s-1.5-.67-1.5-1.5.67-1.5 1.5-1.5 1.5.67 1.5 1.5z"/>
         </svg>
       ),
       security: (
@@ -140,7 +130,7 @@ export default function Home() {
               <div className="step-card glass-effect">
                 <div className="step-number">01</div>
                 <h3>Скачайте приложение</h3>
-                <p>Загрузите RoCleaner для вашей ОС</p>
+                <p>Загрузите RoCleaner для Windows</p>
               </div>
               <div className="step-card glass-effect">
                 <div className="step-number">02</div>
@@ -170,19 +160,17 @@ export default function Home() {
               
               <div className="faq-card glass-effect">
                 <h3>На каких системах работает?</h3>
-                <p>RoCleaner работает на Windows и Linux. Поддержка других систем в разработке.</p>
+                <p>RoCleaner работает на Windows. Поддержка других систем в разработке.</p>
               </div>
               
               <div className="faq-card glass-effect free-card">
-                <div className="free-header">
-                  <h3>Это бесплатно?</h3>
-                  <div className="free-gif-container">
-                    <img 
-                      src="https://media1.tenor.com/m/J4KBZSb6CMcAAAAd/%D0%B1%D0%B5%D1%81%D0%BF%D0%BB%D0%B0%D1%82%D0%BD%D0%BE.gif" 
-                      alt="Бесплатно" 
-                      className="free-gif"
-                    />
-                  </div>
+                <h3>Это бесплатно?</h3>
+                <div className="free-gif-container">
+                  <img 
+                    src="https://media1.tenor.com/m/J4KBZSb6CMcAAAAd/%D0%B1%D0%B5%D1%81%D0%BF%D0%BB%D0%B0%D1%82%D0%BD%D0%BE.gif" 
+                    alt="Бесплатно" 
+                    className="free-gif"
+                  />
                 </div>
                 <p>Да, приложение полностью бесплатное и без скрытых платежей.</p>
               </div>
@@ -504,32 +492,24 @@ export default function Home() {
           border: 2px solid rgba(102, 126, 234, 0.3);
         }
 
-        .free-header {
-          display: flex;
-          align-items: flex-start;
-          justify-content: space-between;
-          gap: 2rem;
-          margin-bottom: 1rem;
-        }
-
-        .free-header h3 {
-          flex: 1;
-          margin: 0;
-          color: #667eea;
+        .faq-card h3 {
           font-size: 1.2rem;
+          margin: 0 0 1rem 0;
           font-weight: 600;
+          color: #667eea;
         }
 
         .free-gif-container {
-          flex-shrink: 0;
-          margin: 0;
+          display: flex;
+          justify-content: center;
+          margin: 1rem 0;
         }
 
         .free-gif {
-          width: 200px;
+          width: 150px;
           height: auto;
-          border-radius: 10px;
-          box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+          border-radius: 8px;
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
         }
 
         .faq-card p {
@@ -619,48 +599,8 @@ export default function Home() {
             padding: 2rem 1.5rem;
           }
           
-          .free-header {
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            gap: 1rem;
-          }
-          
           .free-gif {
-            width: 180px;
-          }
-          
-          .download-links {
-            gap: 0.8rem;
-          }
-          
-          .download-button {
-            padding: 1rem 1.5rem;
-            font-size: 1rem;
-          }
-        }
-
-        @media (max-width: 480px) {
-          .free-gif {
-            width: 160px;
-          }
-          
-          .download-button {
-            flex-direction: column;
-            gap: 0.5rem;
-            text-align: center;
-          }
-          
-          .button-text {
-            order: 2;
-          }
-          
-          .button-icon {
-            order: 1;
-          }
-          
-          .button-arrow {
-            order: 3;
+            width: 120px;
           }
         }
       `}</style>
@@ -686,7 +626,3 @@ export default function Home() {
     </>
   )
 }
-
-
-
-
