@@ -18,7 +18,7 @@ export default function Home() {
     const icons = {
       linux: (
         <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 3L4 8v8l8 5 8-5V8l-8-5zm0 2l6 3.5v5L12 17l-6-3.5v-5L12 5z"/>
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-1-1v-2l1-1v-2l-2-1 1-2h2l1-2 1 2h2l1 2-2 1v2l1 1v2l-1 1h-2l-1-1z"/>
         </svg>
       ),
       windows: (
@@ -636,6 +636,7 @@ export default function Home() {
     </>
   )
 }
+
 
 
 
