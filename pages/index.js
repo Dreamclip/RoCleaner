@@ -4,7 +4,7 @@ export default function Home() {
   const downloadLinks = [
     {
       name: "RoCleaner для Windows",
-      url: "https://drive.google.com/drive/folders/1Uef_ua2UZogn9zlNfn_zJCiOajrVzB-y?usp=sharing",
+      url: "https://drive.google.com/drive/folders/11crQ8SF7L0JmbcN6LHb_o4Y3JwTNYPq6?usp=sharing",
       icon: "windows"
     },
     {
@@ -724,6 +724,7 @@ export default function Home() {
     </>
   )
 }
+
 
 
 
