@@ -10,7 +10,7 @@ export default function Home() {
     {
       name: "RoCleaner для Linux",
       url: "https://drive.google.com/drive/folders/1pAVDjhBtpicZmpYMkR1msMDNDeNc2GMt?usp=sharing",
-      icon: ""
+      icon: "linux"
     }
   ]
 
@@ -724,4 +724,5 @@ export default function Home() {
     </>
   )
 }
+
 
