@@ -14,7 +14,7 @@ export default function Home() {
     },
       {
       name: "RoCleaner для ArchLinux",
-      url: "https://drive.google.com/drive/folders/1pAVDjhBtpicZmpYMkR1msMDNDeNc2GMt?usp=sharing",
+      url: "https://drive.google.com/drive/folders/1eSnJwTZu7JIWUBFgoLdRE-sFyCSeu9Fr?usp=sharing",
       icon: "arch"
     }
   ]
@@ -738,6 +738,7 @@ export default function Home() {
     </>
   )
 }
+
 
 
 
